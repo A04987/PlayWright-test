@@ -12,7 +12,7 @@ export default defineConfig({
   fullyParallel: true,
 
   // 3. ถ้า Test พังใน CI ให้ลองรันใหม่ได้สูงสุด 2 ครั้ง
-  retries: process.env.CI ? 2 : 0,
+  retries: process.env.CI ? 1 : 0,
 
   // 4. จำกัดจำนวนคนช่วยรัน (Workers)
   workers: process.env.CI ? 1 : undefined,
@@ -23,7 +23,7 @@ export default defineConfig({
   // 6. การตั้งค่าพื้นฐานสำหรับทุกลำดับการทดสอบ
   use: {
     // กำหนด URL เริ่มต้น (Base URL) จะได้ไม่ต้องพิมพ์ยาวๆ ใน page.goto()
-    // baseURL: 'http://127.0.0.1:3000',
+    baseURL: 'http://localhost:3000',
 
     // เก็บวิดีโอหรือรูปภาพเมื่อ Test พัง
     trace: 'on-first-retry',
