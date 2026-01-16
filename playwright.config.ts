@@ -19,11 +19,15 @@ export default defineConfig({
 
   // 5. รูปแบบ Report (เปิดดูใน Browser ได้)
 <<<<<<< HEAD
+<<<<<<< HEAD
   reporter: [
     ['html', { outputFolder: 'tests/test-results/html-report', open: 'never' }],                                                    // 1. HTML Report
     ['json', { outputFile: 'tests/test-results/results.json' }],      // 2. JSON
     ['junit', { outputFile: 'tests/test-results/results.xml' }],      // 3. XML
   ],
+=======
+  reporter: 'html',
+>>>>>>> parent of f174111 (Update playwright.config.ts)
 =======
   reporter: 'html',
 >>>>>>> parent of f174111 (Update playwright.config.ts)
