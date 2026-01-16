@@ -17,13 +17,16 @@ export default defineConfig({
   // 4. จำกัดจำนวนคนช่วยรัน (Workers)
   workers: process.env.CI ? 1 : undefined,
 
-
   // 5. รูปแบบ Report (เปิดดูใน Browser ได้)
+<<<<<<< HEAD
   reporter: [
     ['html', { outputFolder: 'tests/test-results/html-report', open: 'never' }],                                                    // 1. HTML Report
     ['json', { outputFile: 'tests/test-results/results.json' }],      // 2. JSON
     ['junit', { outputFile: 'tests/test-results/results.xml' }],      // 3. XML
   ],
+=======
+  reporter: 'html',
+>>>>>>> parent of f174111 (Update playwright.config.ts)
 
   // 6. การตั้งค่าพื้นฐานสำหรับทุกลำดับการทดสอบ
   use: {
