@@ -20,7 +20,7 @@ export default defineConfig({
 
   // 5. รูปแบบ Report (เปิดดูใน Browser ได้)
   reporter: [
-    ['html'],                                                    // 1. HTML Report
+    ['html', { outputFolder: 'test-results/html-report', open: 'never' }],                                                    // 1. HTML Report
     ['json', { outputFile: 'test-results/results.json' }],      // 2. JSON
     ['junit', { outputFile: 'test-results/results.xml' }],      // 3. XML
   ],

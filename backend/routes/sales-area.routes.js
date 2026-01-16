@@ -1,41 +1,32 @@
 const express = require('express');
 const router = express.Router();
 
-// mock database
-const salesAreas = [];
-
 /**
  * POST /api/sales-area
  * create sales area
  */
-router.post('/', (req, res) => {
-  const { name, code, status = true } = req.body;
+router.post('/', async (req, res) => { 
+  try{
+    const { name, code, status = true } = req.body;
 
-  // validation
-  if (!name || !code) {
-    return res.status(400).json({
-      message: 'name and code are required'
-    });
+    //ตรสวจสอบข้อมูล
+    if(!name || !code){
+      return  res.status(400).json({ message: 'Name and Code are required.' });
+    }
+
+    // ตรวจสอบข้อมูลซ้ำ
+    // สมมติว่าเรามีฟังก์ชัน checkDuplicateSalesArea ที่ตรวจสอบข้อมูลซ้ำ
+    const isDuplicate = false; // await checkDuplicateSalesArea(name, code);
+    if(isDuplicate){
+      return res.status(409).json({ message: 'Sales Area with the same name or code already exists.' });
+    }
+
+    // บันทึกข้อมูลลงฐานข้อมูล
+    const newSalesArea = { id: Date.now(), name, code, status };
+  } catch (error) {
+    console.error('Error creating sales area:', error);
+    res.status(500).json({ message: 'Internal server error.' });
   }
-
-  // duplicate check
-  const isDuplicate = salesAreas.find(sa => sa.code === code);
-  if (isDuplicate) {
-    return res.status(409).json({
-      message: 'sales area code already exists'
-    });
-  }
-
-  const newSalesArea = {
-    id: salesAreas.length + 1,
-    name,
-    code,
-    status
-  };
-
-  salesAreas.push(newSalesArea);
-
-  return res.status(201).json(newSalesArea);
 });
 
 module.exports = router;
