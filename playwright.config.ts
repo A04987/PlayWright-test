@@ -17,8 +17,13 @@ export default defineConfig({
   // 4. จำกัดจำนวนคนช่วยรัน (Workers)
   workers: process.env.CI ? 1 : undefined,
 
+
   // 5. รูปแบบ Report (เปิดดูใน Browser ได้)
-  reporter: 'html',
+  reporter: [
+    ['html'],                                                    // 1. HTML Report
+    ['json', { outputFile: 'test-results/results.json' }],      // 2. JSON
+    ['junit', { outputFile: 'test-results/results.xml' }],      // 3. XML
+  ],
 
   // 6. การตั้งค่าพื้นฐานสำหรับทุกลำดับการทดสอบ
   use: {
