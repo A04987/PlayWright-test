@@ -20,9 +20,9 @@ export default defineConfig({
 
   // 5. รูปแบบ Report (เปิดดูใน Browser ได้)
   reporter: [
-    ['html', { outputFolder: 'test-results/html-report', open: 'never' }],                                                    // 1. HTML Report
-    ['json', { outputFile: 'test-results/results.json' }],      // 2. JSON
-    ['junit', { outputFile: 'test-results/results.xml' }],      // 3. XML
+    ['html', { outputFolder: 'tests/test-results/html-report', open: 'never' }],                                                    // 1. HTML Report
+    ['json', { outputFile: 'tests/test-results/results.json' }],      // 2. JSON
+    ['junit', { outputFile: 'tests/test-results/results.xml' }],      // 3. XML
   ],
 
   // 6. การตั้งค่าพื้นฐานสำหรับทุกลำดับการทดสอบ

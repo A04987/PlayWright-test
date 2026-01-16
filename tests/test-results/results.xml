@@ -1,0 +1,44 @@
+<testsuites id="" name="" tests="9" failures="3" skipped="0" errors="0" time="30.782781000000004">
+<testsuite name="api\sales-area.api.spec.ts" timestamp="2026-01-16T05:46:10.803Z" hostname="chromium" tests="3" failures="1" skipped="0" time="30.077" errors="0">
+<testcase name="Sales Area - API Only › API_001: สร้างข้อมูลเขตขายสำเร็จ" classname="api\sales-area.api.spec.ts" time="30.011">
+<failure message="sales-area.api.spec.ts:10:7 API_001: สร้างข้อมูลเขตขายสำเร็จ" type="FAILURE">
+<![CDATA[  [chromium] › api\sales-area.api.spec.ts:10:7 › Sales Area - API Only › API_001: สร้างข้อมูลเขตขายสำเร็จ 
+
+    Test timeout of 30000ms exceeded.
+]]>
+</failure>
+</testcase>
+<testcase name="Sales Area - API Only › API_002: สร้างข้อมูลเขตขายไม่สำเร็จเมื่อไม่ระบุชื่อ" classname="api\sales-area.api.spec.ts" time="0.035">
+</testcase>
+<testcase name="Sales Area - API Only › API_003: สร้างข้อมูลเขตขายไม่สำเร็จเมื่อไม่ระบุรหัส" classname="api\sales-area.api.spec.ts" time="0.031">
+</testcase>
+</testsuite>
+<testsuite name="api\sales-area.api.spec.ts" timestamp="2026-01-16T05:46:10.803Z" hostname="firefox" tests="3" failures="1" skipped="0" time="30.06" errors="0">
+<testcase name="Sales Area - API Only › API_001: สร้างข้อมูลเขตขายสำเร็จ" classname="api\sales-area.api.spec.ts" time="30.007">
+<failure message="sales-area.api.spec.ts:10:7 API_001: สร้างข้อมูลเขตขายสำเร็จ" type="FAILURE">
+<![CDATA[  [firefox] › api\sales-area.api.spec.ts:10:7 › Sales Area - API Only › API_001: สร้างข้อมูลเขตขายสำเร็จ 
+
+    Test timeout of 30000ms exceeded.
+]]>
+</failure>
+</testcase>
+<testcase name="Sales Area - API Only › API_002: สร้างข้อมูลเขตขายไม่สำเร็จเมื่อไม่ระบุชื่อ" classname="api\sales-area.api.spec.ts" time="0.027">
+</testcase>
+<testcase name="Sales Area - API Only › API_003: สร้างข้อมูลเขตขายไม่สำเร็จเมื่อไม่ระบุรหัส" classname="api\sales-area.api.spec.ts" time="0.026">
+</testcase>
+</testsuite>
+<testsuite name="api\sales-area.api.spec.ts" timestamp="2026-01-16T05:46:10.803Z" hostname="webkit" tests="3" failures="1" skipped="0" time="30.061" errors="0">
+<testcase name="Sales Area - API Only › API_001: สร้างข้อมูลเขตขายสำเร็จ" classname="api\sales-area.api.spec.ts" time="30.014">
+<failure message="sales-area.api.spec.ts:10:7 API_001: สร้างข้อมูลเขตขายสำเร็จ" type="FAILURE">
+<![CDATA[  [webkit] › api\sales-area.api.spec.ts:10:7 › Sales Area - API Only › API_001: สร้างข้อมูลเขตขายสำเร็จ 
+
+    Test timeout of 30000ms exceeded.
+]]>
+</failure>
+</testcase>
+<testcase name="Sales Area - API Only › API_002: สร้างข้อมูลเขตขายไม่สำเร็จเมื่อไม่ระบุชื่อ" classname="api\sales-area.api.spec.ts" time="0.02">
+</testcase>
+<testcase name="Sales Area - API Only › API_003: สร้างข้อมูลเขตขายไม่สำเร็จเมื่อไม่ระบุรหัส" classname="api\sales-area.api.spec.ts" time="0.027">
+</testcase>
+</testsuite>
+</testsuites>

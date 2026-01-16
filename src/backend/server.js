@@ -5,7 +5,7 @@ const db = require('./models'); // สมมติว่ามีไฟล์ db
 app.use(express.json());
 
 // import routes
-const salesAreaRoutes = require('./sales-area.routes');
+const salesAreaRoutes = require('./routes/sales-area.routes');
 app.use('/api/sales-area', salesAreaRoutes);
 
 //เชื่อมต่อ sqlize และรัน server
